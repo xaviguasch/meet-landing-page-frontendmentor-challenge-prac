@@ -47,8 +47,8 @@ body {
   background-color: var(--clr-white);
   color: var(--clr-black);
   font-family: var(--ff-main);
-  line-height: 1.45;
-  font-size: var(--fs-18);
+  line-height: 1.6;
+  font-size: var(--fs-16);
   font-weight: var(--fw-medium);
   text-align: center;
 }
@@ -58,6 +58,46 @@ img {
 }
 
 /* Typography */
+.header-title {
+  font-size: var(--fs-40);
+  font-weight: var(--fw-black);
+  line-height: 1.1;
+}
+
+.text {
+  color: var(--clr-grey);
+}
+
+.download-btn,
+.cta-btn {
+  font-family: inherit;
+  color: var(--clr-white);
+  font-weight: var(--fw-black);
+  font-size: var(--fs-16);
+}
+
+.section-divider {
+  color: var(--clr-grey);
+  font-weight: var(--fw-black);
+}
+
+.subtitle {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: var(--fw-black);
+
+  color: var(--clr-dark-green);
+}
+
+.title {
+  font-weight: var(--fw-black);
+  line-height: 1.125;
+}
+
+.title--footer,
+.text--footer {
+  color: var(--clr-white);
+}
 
 /* Utility styles */
 
