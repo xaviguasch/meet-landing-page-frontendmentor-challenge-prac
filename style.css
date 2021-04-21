@@ -172,7 +172,7 @@ img {
 }
 
 .header-copy-and-buttons .text {
-  margin-top: 1.5em;
+  margin: 1.5em auto 0;
   width: 95%;
 }
 
