@@ -32,6 +32,7 @@
   --fs-32: 2rem;
   --fs-36: 2.25rem;
   --fs-40: 2.5rem;
+  --fs-48: 3rem;
   --fs-64: 4rem;
 
   --clr-dark-green: hsla(192, 37%, 48%, 1);
@@ -146,7 +147,7 @@ img {
 
   margin: 0 auto;
 
-  max-width: 600px;
+  max-width: 550px;
 }
 
 /* SECTIONS */
@@ -275,4 +276,219 @@ img {
 
 .footer-copy > .download-btn {
   margin: 1.5em auto;
+}
+
+/* MEDIA QUERIES */
+
+/* tablet */
+
+@media (min-width: 760px) {
+  /* Typography */
+  .header-title {
+    font-size: var(--fs-48);
+  }
+  .text {
+    font-size: var(--fs-16);
+  }
+
+  .subtitle {
+    font-size: var(--fs-16);
+  }
+
+  .title {
+    font-size: var(--fs-40);
+  }
+
+  /* Buttons */
+  .download-btn,
+  .cta-btn {
+    /* Typography */
+    font-size: var(--fs-16);
+  }
+
+  /* Utility styles */
+  .container {
+    max-width: unset;
+  }
+
+  /* Sections */
+  .header {
+    margin-top: 4em;
+    width: 100%;
+  }
+
+  .header-image-mobile {
+    background: url('./assets/tablet/image-hero.png') center no-repeat;
+    background-size: cover;
+    transform: unset;
+
+    min-height: 300px;
+
+    margin-top: 4em;
+  }
+
+  .header-copy-and-buttons {
+    margin: 5em auto 0;
+  }
+
+  .header-title {
+    width: 45%;
+    margin: 0 auto;
+  }
+
+  .header-copy-and-buttons .text {
+    width: 60%;
+    margin: 1.5em auto 0;
+  }
+
+  .header-buttons {
+    flex-direction: row;
+  }
+
+  .main-section {
+    margin-top: 5em;
+  }
+
+  .photo-gallery {
+    flex-wrap: nowrap;
+    column-gap: 0.8em;
+
+    padding: 0 4em;
+    margin-top: 4em;
+  }
+
+  .main-section-copy {
+    margin-top: 3em;
+  }
+
+  .main-section-copy > .title {
+    margin-top: 0.5em;
+    width: 60%;
+  }
+
+  .main-section-copy > .text {
+    margin-top: 2em;
+    width: 78%;
+  }
+
+  .footer-copy {
+    padding: 4.5em 0 2.5em;
+  }
+
+  .footer-copy > .title {
+    margin: 0.5em auto 0;
+    width: 60%;
+  }
+
+  .footer-copy > .text {
+    font-size: var(--fs-18);
+    width: 75%;
+  }
+
+  .footer-copy > .download-btn {
+    margin-top: 2.5em;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Typography */
+  .header-title {
+    font-size: var(--fs-64);
+  }
+  .text {
+    font-size: var(--fs-18);
+  }
+
+  .subtitle {
+    font-size: var(--fs-16);
+  }
+
+  .header-image-mobile {
+    display: none;
+  }
+
+  .header-desktop-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-image-left {
+    background: url('./assets/desktop/image-hero-left.png') 0 0 no-repeat;
+    background-size: contain;
+    transform: scale(0.8);
+
+    width: 30%;
+    height: 300px;
+    margin-left: -4em;
+  }
+  .header-image-right {
+    background: url('./assets/desktop/image-hero-right.png') 0 0 no-repeat;
+    background-size: contain;
+    transform: scale(0.8);
+
+    /* min-height: 150px; */
+    width: 30%;
+    height: 300px;
+    margin-right: -4em;
+  }
+
+  .header-copy-and-buttons {
+    width: 45%;
+  }
+
+  .header-title {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .header-copy-and-buttons .text {
+    width: 100%;
+    margin: 1.5em auto 0;
+  }
+
+  .photo-gallery {
+    margin: 4em auto 0;
+    width: 85%;
+  }
+
+  .main-section-copy {
+    margin-top: 5em;
+  }
+
+  .main-section-copy > .title {
+    width: 38%;
+  }
+
+  .main-section-copy > .text {
+    width: 43%;
+  }
+
+  .footer {
+    width: 100%;
+  }
+
+  .footer-copy {
+    background: url('./assets/desktop/image-footer.jpg') center no-repeat;
+    background-blend-mode: soft-light;
+    background-color: var(--clr-dark-green);
+    background-size: cover;
+
+    padding: 6em 6em 4em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    text-align: left;
+  }
+
+  .footer-copy > .title {
+    width: 35%;
+  }
+  .footer-copy > .text {
+    width: 33%;
+  }
 }
