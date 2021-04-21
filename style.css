@@ -35,10 +35,13 @@
   --fs-64: 4rem;
 
   --clr-dark-green: hsla(192, 37%, 48%, 1);
+  --clr-dark-green-hover: rgb(130, 204, 223);
   --clr-dark-purple: hsla(268, 34%, 53%, 1);
+  --clr-dark-purple-hover: hsl(268, 68%, 70%);
   --clr-black: hsla(240, 21%, 20%, 1);
   --clr-white: hsla(0, 0%, 98%, 1);
   --clr-grey: hsla(240, 10%, 57%, 1);
+  --clr-soft-grey: hsl(240, 67%, 90%);
   --clr-clear-blue: hsla(192, 90%, 77%, 1);
   --clr-clear-purple: hsla(268, 100%, 86%, 1);
 }
@@ -48,8 +51,8 @@ body {
   color: var(--clr-black);
   font-family: var(--ff-main);
   line-height: 1.6;
-  font-size: var(--fs-16);
-  font-weight: var(--fw-medium);
+  font-size: var(--fs-15);
+  font-weight: var(--fw-regular);
   text-align: center;
 }
 
@@ -68,15 +71,7 @@ img {
   color: var(--clr-grey);
 }
 
-.download-btn,
-.cta-btn {
-  font-family: inherit;
-  color: var(--clr-white);
-  font-weight: var(--fw-black);
-  font-size: var(--fs-16);
-}
-
-.section-divider {
+.section-divider-num {
   color: var(--clr-grey);
   font-weight: var(--fw-black);
 }
@@ -90,6 +85,7 @@ img {
 }
 
 .title {
+  font-size: var(--fs-32);
   font-weight: var(--fw-black);
   line-height: 1.125;
 }
@@ -99,16 +95,184 @@ img {
   color: var(--clr-white);
 }
 
+/* Buttons */
+
+.download-btn,
+.cta-btn {
+  /* Typography */
+  font-family: inherit;
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-14);
+
+  border: none;
+  border-radius: 2em;
+  padding: 1em 2em;
+  color: var(--clr-white);
+  cursor: pointer;
+  display: block;
+}
+
+.download-btn {
+  background-color: var(--clr-dark-green);
+}
+.download-btn:hover,
+.download-btn:active {
+  background-color: var(--clr-dark-green-hover);
+}
+
+.download-btn > span {
+  color: var(--clr-clear-blue);
+}
+
+.cta-btn,
+.download-btn--accent {
+  background-color: var(--clr-dark-purple);
+}
+.cta-btn:hover,
+.cta-btn:active,
+.download-btn--accent:hover,
+.download-btn--accent:active {
+  background-color: var(--clr-dark-purple-hover);
+}
+
 /* Utility styles */
 
 .container {
   /* flex properties */
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  margin: 0 auto; */
+  margin: 0 auto;
+
+  max-width: 600px;
 }
 
 /* SECTIONS */
+
+.header {
+  margin-top: 3em;
+  overflow: hidden;
+}
+
+.logo {
+}
+
+.header-image-mobile {
+  background: url('./assets/tablet/image-hero.png') center no-repeat;
+  background-size: contain;
+  transform: scale(1.1);
+
+  min-height: 150px;
+  width: 100%;
+
+  margin-top: 3em;
+}
+
+.header-copy-and-buttons {
+  margin-top: 2em;
+  padding: 0 1em;
+}
+
+.header-copy-and-buttons .text {
+  margin-top: 1.5em;
+  width: 95%;
+}
+
+.header-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75em;
+
+  margin-top: 1.5em;
+}
+
+.main-section {
+  margin-top: 3em;
+}
+
+.section-divider-line {
+  height: 80px;
+  width: 1px;
+  background-color: var(--clr-soft-grey);
+  margin: 0 auto;
+}
+
+.section-divider-num {
+  background-color: var(--clr-white);
+  border: 1px solid var(--clr-soft-grey);
+  border-radius: 100%;
+  padding: 1.5em;
+  height: 20px;
+  width: 20px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 0.6em;
+  column-gap: 1.2em;
+
+  padding: 1em;
+  margin-top: 2em;
+}
+
+.photo-gallery > .image {
+  width: 47%;
+}
+
+.photo-gallery > .image > img {
+  border-radius: 0.5em;
+}
+
+.main-section-copy {
+  margin-top: 2em;
+  padding: 0 1em;
+}
+
+.main-section-copy > .title {
+  margin: 1em auto 0;
+  width: 90%;
+}
+
+.main-section-copy > .text {
+  margin: 1em auto 0;
+
+  width: 92%;
+}
+
+.footer {
+  margin-top: 3em;
+}
+
+.footer > .section-divider {
+  transform: translate(0%, 20%);
+}
+
+.footer-copy {
+  background: url('./assets/tablet/image-footer.jpg') center no-repeat;
+  background-blend-mode: soft-light;
+  background-color: var(--clr-dark-green);
+  background-size: cover;
+  padding: 3em 0;
+}
+
+.footer-copy > .text {
+  width: 70%;
+  margin: 1em auto;
+}
+
+.footer-copy > .download-btn {
+  margin: 1.5em auto;
+}
